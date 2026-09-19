@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "author": "Velxio",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-velxio-esp32",
+      "id": "esp32",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r-led",
+      "top": 155,
+      "left": 270,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-ext",
+      "top": 140,
+      "left": 420,
+      "attrs": {
+        "color": "red"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp32:4",
+      "r-led:1",
+      "#e74c3c",
+      []
+    ],
+    [
+      "r-led:2",
+      "led-ext:A",
+      "#e74c3c",
+      []
+    ],
+    [
+      "led-ext:C",
+      "esp32:GND",
+      "#2c3e50",
+      []
+    ]
+  ]
+}
